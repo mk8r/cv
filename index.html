@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MD. Sajjad Islam - Digital Marketing Manager CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
@@ -20,7 +20,8 @@
             background-color: #f5f7fa;
         }
         .cv-container {
-            width: 720px;
+            max-width: 720px;
+            width: 100%;
             min-height: 1334px;
             margin: 0 auto;
             background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
@@ -383,9 +384,177 @@
             margin-left: 20px;
             align-self: center;
         }
+        
+        /* Responsive styles */
+        @media (max-width: 1024px) {
+            .cv-container {
+                padding: 30px;
+            }
+            .name {
+                font-size: 36px;
+            }
+            .title {
+                font-size: 22px;
+            }
+            .section-title {
+                font-size: 20px;
+            }
+            .position {
+                font-size: 18px;
+            }
+            .company {
+                font-size: 16px;
+            }
+            li {
+                font-size: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .cv-container {
+                padding: 20px;
+            }
+            .name {
+                font-size: 32px;
+            }
+            .title {
+                font-size: 20px;
+            }
+            .contact-row {
+                justify-content: center;
+            }
+            .section-title {
+                font-size: 18px;
+            }
+            .position {
+                font-size: 17px;
+            }
+            .company {
+                font-size: 15px;
+            }
+            li {
+                font-size: 14px;
+            }
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            .certification-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .featured-cert {
+                grid-column: span 2;
+                flex-direction: column;
+            }
+            .featured-cert-icon {
+                margin-left: 0;
+                margin-top: 15px;
+                align-self: flex-start;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .cv-container {
+                padding: 15px;
+            }
+            .name {
+                font-size: 28px;
+            }
+            .title {
+                font-size: 18px;
+            }
+            
+            /* Mobile contact section - more compact and side-by-side */
+            .contact-row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 6px;
+                margin-top: 10px;
+            }
+            .contact-item {
+                padding: 6px 10px;
+                font-size: 12px;
+                border-radius: 20px;
+                flex: 1 1 calc(50% - 3px);
+                margin-bottom: 6px;
+                justify-content: center;
+            }
+            .contact-item i {
+                margin-right: 5px;
+                font-size: 12px;
+            }
+            .contact-divider {
+                display: none;
+            }
+            
+            .section-title {
+                font-size: 16px;
+            }
+            .position {
+                font-size: 16px;
+            }
+            .company {
+                font-size: 14px;
+            }
+            li {
+                font-size: 13px;
+                padding-left: 20px;
+            }
+            li::before {
+                font-size: 12px;
+            }
+            
+            /* Certification grid - 2 columns for mobile */
+            .certification-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            
+            /* Featured certifications - thinner and more compact */
+            .featured-cert {
+                grid-column: span 2;
+                padding: 12px;
+                margin-bottom: 10px;
+            }
+            .featured-cert-content {
+                flex: 1;
+            }
+            .featured-cert-name {
+                font-size: 16px;
+                margin-bottom: 3px;
+            }
+            .certification-issuer {
+                font-size: 12px;
+                margin-bottom: 3px;
+            }
+            .featured-cert-details {
+                gap: 10px;
+                margin-top: 5px;
+            }
+            .featured-cert-label {
+                font-size: 11px;
+            }
+            .featured-cert-value {
+                font-size: 12px;
+            }
+            .featured-cert-verify {
+                padding: 4px 10px;
+                font-size: 12px;
+                margin-top: 6px;
+            }
+            .featured-cert-icon {
+                font-size: 36px;
+                margin-left: 10px;
+                margin-top: 0;
+                align-self: center;
+            }
+        }
+        
         @media print {
             .cv-container {
                 box-shadow: none;
+                width: 100%;
+                max-width: none;
             }
         }
     </style>
@@ -417,13 +586,11 @@
                 </div>
             </div>
         </div>
-
         <!-- Professional Summary Section -->
         <div class="section">
             <h3 class="section-title">Professional Summary</h3>
             <p>Digital marketing manager with <span class="highlight">over 7 years of experience</span> in creating and executing successful marketing strategies to drive business growth. Proven track record of boosting brand awareness and product engagement through targeted campaigns and events. Skilled in using data analysis and market research to identify opportunities and trends, and leading cross-functional teams to execute campaigns on time and within budget. Experienced in managing budgets and using digital marketing tools to improve ROI.</p>
         </div>
-
         <!-- Professional Experience Section -->
         <div class="section">
             <h3 class="section-title">Professional Experience</h3>
@@ -484,7 +651,6 @@
                 </ul>
             </div>
         </div>
-
         <!-- Volunteer Experience Section -->
         <div class="section">
             <h3 class="section-title">Volunteer Experience</h3>
@@ -519,7 +685,6 @@
                     <li>Built relationships with influencers and media</li>
                     <li>Collaborated with social media influencers</li>
                 </ul>
-
                 <div class="volunteer-highlight">
                     Extensive volunteer works and partner projects completed as digital marketer, creating impactful campaigns and fostering brand partnerships.
                 </div>
@@ -529,7 +694,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Skills & Expertise Section -->
         <div class="section">
             <h3 class="section-title">Skills &amp; Expertise</h3>
@@ -606,7 +770,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Education Section -->
         <div class="section">
             <h3 class="section-title">Education</h3>
@@ -631,7 +794,6 @@
                 <p>Group: Arts and Humanities</p>
             </div>
         </div>
-
         <!-- Certifications Section -->
         <div class="section">
             <h3 class="section-title">Certifications</h3>
@@ -788,5 +950,5 @@
             </div>
         </div>
     </div>
-
-</body></html>
+</body>
+</html>

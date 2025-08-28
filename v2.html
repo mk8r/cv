@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD. Sajjad Islam - Digital Marketing Manager CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/mk8r/img/refs/heads/main/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            line-height: 1.5;
+            background-color: #f5f7fa;
+        }
+        .cv-container {
+            max-width: 720px;
+            width: 100%;
+            min-height: 1334px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cv-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #1976d2, #64b5f6);
+        }
+        .header {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .name {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1976d2;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #546e7a;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        .title::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #1976d2;
+        }
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            background-color: #f1f8fe;
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .contact-item:hover {
+            background-color: #e3f2fd;
+            transform: translateY(-2px);
+        }
+        .contact-item i {
+            margin-right: 8px;
+            color: #1976d2;
+        }
+        .contact-divider {
+            color: #90a4ae;
+            font-size: 14px;
+        }
+        .section {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1976d2;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-left: 15px;
+        }
+        .section-title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 22px;
+            background-color: #1976d2;
+        }
+        .experience-item, .volunteer-item, .education-item {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 2px solid #e3f2fd;
+            position: relative;
+        }
+        .experience-item::before, .volunteer-item::before, .education-item::before {
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #1976d2;
+        }
+        .position {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #37474f;
+        }
+        .company {
+            font-size: 18px;
+            font-weight: 600;
+            color: #546e7a;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .company i {
+            margin-right: 8px;
+            color: #1976d2;
+            font-size: 16px;
+        }
+        .date {
+            font-size: 15px;
+            color: #78909c;
+            margin-bottom: 10px;
+            font-style: italic;
+            display: inline-block;
+            background-color: #eceff1;
+            padding: 3px 10px;
+            border-radius: 15px;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 10px;
+            list-style-type: none;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 16px;
+            position: relative;
+            padding-left: 25px;
+        }
+        li::before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #1976d2;
+            font-size: 14px;
+        }
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .skill-category {
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .skill-category-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #37474f;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .skill-category-title i {
+            margin-right: 8px;
+            color: #1976d2;
+        }
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-item {
+            background-color: #e3f2fd;
+            color: #1976d2;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .skill-item:hover {
+            background-color: #1976d2;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .highlight {
+            background-color: #e8f5e9;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #2e7d32;
+            font-weight: 600;
+        }
+        .volunteer-highlight {
+            background-color: #fff8e1;
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin-top: 10px;
+            font-style: italic;
+            color: #5d4037;
+        }
+        .certification-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .certification-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f8fe 100%);
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        .certification-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .certification-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #1976d2, #64b5f6);
+        }
+        .certification-name {
+            font-weight: 600;
+            color: #37474f;
+            margin-bottom: 5px;
+            font-size: 15px;
+            line-height: 1.3;
+        }
+        .certification-issuer {
+            font-size: 13px;
+            color: #546e7a;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+        .certification-year {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: #1976d2;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        .certification-verify {
+            display: inline-flex;
+            align-items: center;
+            background-color: #1976d2;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-top: 8px;
+        }
+        .certification-verify:hover {
+            background-color: #1565c0;
+            transform: translateY(-2px);
+        }
+        .certification-verify i {
+            margin-right: 5px;
+        }
+        .featured-cert {
+            grid-column: span 3;
+            display: flex;
+            background: linear-gradient(135deg, #f8fafc 0%, #e3f2fd 100%);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        .featured-cert::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(180deg, #1976d2, #64b5f6);
+        }
+        .featured-cert-content {
+            flex: 1;
+        }
+        .featured-cert-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1976d2;
+            margin-bottom: 5px;
+        }
+        .featured-cert-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .featured-cert-detail {
+            display: flex;
+            flex-direction: column;
+        }
+        .featured-cert-label {
+            font-size: 12px;
+            color: #78909c;
+            margin-bottom: 2px;
+        }
+        .featured-cert-value {
+            font-size: 14px;
+            color: #37474f;
+            font-weight: 600;
+        }
+        .featured-cert-verify {
+            display: inline-flex;
+            align-items: center;
+            background-color: #1976d2;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .featured-cert-verify:hover {
+            background-color: #1565c0;
+            transform: translateY(-2px);
+        }
+        .featured-cert-verify i {
+            margin-right: 5px;
+        }
+        .featured-cert-icon {
+            font-size: 50px;
+            color: rgba(25, 118, 210, 0.15);
+            margin-left: 20px;
+            align-self: center;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 1024px) {
+            .cv-container {
+                padding: 30px;
+            }
+            .name {
+                font-size: 36px;
+            }
+            .title {
+                font-size: 22px;
+            }
+            .section-title {
+                font-size: 20px;
+            }
+            .position {
+                font-size: 18px;
+            }
+            .company {
+                font-size: 16px;
+            }
+            li {
+                font-size: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .cv-container {
+                padding: 20px;
+            }
+            .name {
+                font-size: 32px;
+            }
+            .title {
+                font-size: 20px;
+            }
+            .contact-row {
+                justify-content: center;
+            }
+            .section-title {
+                font-size: 18px;
+            }
+            .position {
+                font-size: 17px;
+            }
+            .company {
+                font-size: 15px;
+            }
+            li {
+                font-size: 14px;
+            }
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            .certification-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .featured-cert {
+                grid-column: span 2;
+                flex-direction: column;
+            }
+            .featured-cert-icon {
+                margin-left: 0;
+                margin-top: 15px;
+                align-self: flex-start;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .cv-container {
+                padding: 15px;
+            }
+            .name {
+                font-size: 28px;
+            }
+            .title {
+                font-size: 18px;
+            }
+            
+            /* Mobile contact section - more compact and side-by-side */
+            .contact-row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 6px;
+                margin-top: 10px;
+            }
+            .contact-item {
+                padding: 6px 10px;
+                font-size: 12px;
+                border-radius: 20px;
+                flex: 1 1 calc(50% - 3px);
+                margin-bottom: 6px;
+                justify-content: center;
+            }
+            .contact-item i {
+                margin-right: 5px;
+                font-size: 12px;
+            }
+            .contact-divider {
+                display: none;
+            }
+            
+            .section-title {
+                font-size: 16px;
+            }
+            .position {
+                font-size: 16px;
+            }
+            .company {
+                font-size: 14px;
+            }
+            li {
+                font-size: 13px;
+                padding-left: 20px;
+            }
+            li::before {
+                font-size: 12px;
+            }
+            
+            /* Certification grid - 2 columns for mobile */
+            .certification-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            
+            /* Featured certifications - thinner and more compact */
+            .featured-cert {
+                grid-column: span 2;
+                padding: 12px;
+                margin-bottom: 10px;
+            }
+            .featured-cert-content {
+                flex: 1;
+            }
+            .featured-cert-name {
+                font-size: 16px;
+                margin-bottom: 3px;
+            }
+            .certification-issuer {
+                font-size: 12px;
+                margin-bottom: 3px;
+            }
+            .featured-cert-details {
+                gap: 10px;
+                margin-top: 5px;
+            }
+            .featured-cert-label {
+                font-size: 11px;
+            }
+            .featured-cert-value {
+                font-size: 12px;
+            }
+            .featured-cert-verify {
+                padding: 4px 10px;
+                font-size: 12px;
+                margin-top: 6px;
+            }
+            .featured-cert-icon {
+                font-size: 36px;
+                margin-left: 10px;
+                margin-top: 0;
+                align-self: center;
+            }
+        }
+        
+        @media print {
+            .cv-container {
+                box-shadow: none;
+                width: 100%;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1 class="name">MD. Sajjad Islam</h1>
+            <h2 class="title">Digital Marketing Manager</h2>
+            <div class="contact-row">
+                <a href="mailto:sharian.saju@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    sharian.saju@gmail.com
+                </a>
+                <span class="contact-divider">|</span>
+                <a href="tel:+8801942488252" class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    +8801942488252
+                </a>
+                <span class="contact-divider">|</span>
+                <a href="https://bd.linkedin.com/in/shariansaju" target="_blank" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn/shariansaju<br></a>
+                <span class="contact-divider">|</span>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Wari, Dhaka - Bangladesh
+                </div>
+            </div>
+        </div>
+        <!-- Professional Summary Section -->
+        <div class="section">
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Digital marketing manager with <span class="highlight">over 7 years of experience</span> in creating and executing successful marketing strategies to drive business growth. Proven track record of boosting brand awareness and product engagement through targeted campaigns and events. Skilled in using data analysis and market research to identify opportunities and trends, and leading cross-functional teams to execute campaigns on time and within budget. Experienced in managing budgets and using digital marketing tools to improve ROI.</p>
+        </div>
+        <!-- Professional Experience Section -->
+        <div class="section">
+            <h3 class="section-title">Professional Experience</h3>
+            
+            <div class="experience-item">
+                <h4 class="position">Leader of SEM &amp; SMM | Digital Marketing Manager</h4>
+                <div class="company">
+                    <i class="fas fa-building"></i>
+                    ScaleUp Ads Agency (Betopia Group)
+                </div>
+                <p class="date">November 2024 – Present</p>
+                <ul>
+                    <li>Promoted to Team Leader after three months</li>
+                    <li>Spearheaded <span class="highlight">300+ digital marketing projects</span></li>
+                    <li>Led high-performing Social Media Marketing team</li>
+                    <li>Managed SEM campaigns (Google Ads, YouTube)</li>
+                    <li>Directed SMM campaigns (Meta, TikTok)</li>
+                    <li>Optimized campaign performance and ROI</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h4 class="position">Marketing Manager &amp; KOL Management</h4>
+                <div class="company">
+                    <i class="fas fa-building"></i>
+                    SHANGHAI MOONTON TECHNOLOGY CO., LTD (MOONTON Games)
+                </div>
+                <p class="date">Feb 2022 – Jun 2024</p>
+                <ul>
+                    <li>Trade show and event planning and management</li>
+                    <li>Marketing strategy development</li>
+                    <li>Influencer marketing and management</li>
+                    <li>Campaign planning and execution</li>
+                    <li>Market research and analysis</li>
+                    <li>Content marketing and budget management</li>
+                    <li>Cross-functional team leadership</li>
+                    <li>Digital marketing and social media management</li>
+                    <li>Customer engagement and creative problem-solving</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h4 class="position">Marketing Manager &amp; Moderator</h4>
+                <div class="company">
+                    <i class="fas fa-building"></i>
+                    BIGO TECHNOLOGY PTE. LTD.
+                </div>
+                <p class="date">2019 – 2022</p>
+                <ul>
+                    <li>Marketing strategy development and implementation</li>
+                    <li>In-app system management and moderation</li>
+                    <li>Influencer marketing and campaign planning</li>
+                    <li>Market research and analysis</li>
+                    <li>Budget management and cost control</li>
+                    <li>Cross-functional team leadership</li>
+                    <li>Digital marketing and social media management</li>
+                    <li>Customer engagement and copywriting</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Volunteer Experience Section -->
+        <div class="section">
+            <h3 class="section-title">Volunteer Experience</h3>
+            
+            <div class="volunteer-item">
+                <h4 class="position">Volunteer Marketing Manager</h4>
+                <div class="company">
+                    <i class="fas fa-handshake"></i>
+                    Vivo Bangladesh
+                </div>
+                <p class="date">2021</p>
+                <ul>
+                    <li>Managed team of 10 volunteers</li>
+                    <li>Created product launch campaign</li>
+                    <li>Executed multi-channel marketing plan</li>
+                    <li>Achieved <span class="highlight">15% increase in sales</span></li>
+                    <li>Collaborated with social media influencers</li>
+                    <li>Trained and mentored junior volunteers</li>
+                </ul>
+                
+            </div>
+            
+            <div class="volunteer-item">
+                <h4 class="position">Volunteer Marketing Helper</h4>
+                <div class="company">
+                    <i class="fas fa-handshake"></i>
+                    OPPO
+                </div>
+                <p class="date">2021</p>
+                <ul>
+                    <li>Created engaging content (blog, videos)</li>
+                    <li>Built relationships with influencers and media</li>
+                    <li>Collaborated with social media influencers</li>
+                </ul>
+                <div class="volunteer-highlight">
+                    Extensive volunteer works and partner projects completed as digital marketer, creating impactful campaigns and fostering brand partnerships.
+                </div>
+                
+                <div class="volunteer-highlight">
+                    Participated in numerous partner works and volunteer initiatives, leveraging digital marketing expertise to support brand initiatives.
+                </div>
+            </div>
+        </div>
+        <!-- Skills & Expertise Section -->
+        <div class="section">
+            <h3 class="section-title">Skills &amp; Expertise</h3>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4 class="skill-category-title">
+                        <i class="fas fa-bullhorn"></i>
+                        Marketing
+                    </h4>
+                    <div class="skill-list">
+                        <span class="skill-item">Strategy Development</span>
+                        <span class="skill-item">Campaign Planning</span>
+                        <span class="skill-item">Brand Management</span>
+                        <span class="skill-item">Customer Engagement</span>
+                        <span class="skill-item">Event Planning</span>
+                        <span class="skill-item">Influencer Marketing</span>
+                        <span class="skill-item">Content Strategy</span>
+                        <span class="skill-item">Growth Hacking</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4 class="skill-category-title">
+                        <i class="fas fa-chart-line"></i>
+                        Analytical
+                    </h4>
+                    <div class="skill-list">
+                        <span class="skill-item">Market Research</span>
+                        <span class="skill-item">Data Analysis</span>
+                        <span class="skill-item">ROI Optimization</span>
+                        <span class="skill-item">Performance Tracking</span>
+                        <span class="skill-item">A/B Testing</span>
+                        <span class="skill-item">Conversion Rate Optimization</span>
+                        <span class="skill-item">Predictive Analytics</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4 class="skill-category-title">
+                        <i class="fas fa-users"></i>
+                        Leadership
+                    </h4>
+                    <div class="skill-list">
+                        <span class="skill-item">Budget Management</span>
+                        <span class="skill-item">Team Leadership</span>
+                        <span class="skill-item">Marketing Automation</span>
+                        <span class="skill-item">CRM Management</span>
+                        <span class="skill-item">Strategic Planning</span>
+                        <span class="skill-item">Change Management</span>
+                        <span class="skill-item">Cross-functional Collaboration</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4 class="skill-category-title">
+                        <i class="fas fa-laptop-code"></i>
+                        Technical
+                    </h4>
+                    <div class="skill-list">
+                        <span class="skill-item">Google Ads</span>
+                        <span class="skill-item">Google Analytics</span>
+                        <span class="skill-item">Google Tag Manager</span>
+                        <span class="skill-item">Looker Studio</span>
+                        <span class="skill-item">WordPress</span>
+                        <span class="skill-item">CRM</span>
+                        <span class="skill-item">GHL</span>
+                        <span class="skill-item">Meta Business Suite</span>
+                        <span class="skill-item">SEMrush</span>
+                        <span class="skill-item">HubSpot</span>
+                        <span class="skill-item">Mailchimp</span>
+                        <span class="skill-item">Canva</span>
+                        <span class="skill-item">Adobe Creative Suite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Education Section -->
+        <div class="section">
+            <h3 class="section-title">Education</h3>
+            
+            <div class="education-item">
+                <h4 class="position">Higher Secondary School Certificate</h4>
+                <div class="company">
+                    <i class="fas fa-graduation-cap"></i>
+                    Shaikh Burhanuddin Post Graduate College
+                </div>
+                <p class="date">2022</p>
+                <p>Group: Arts and Humanities</p>
+            </div>
+            
+            <div class="education-item">
+                <h4 class="position">Secondary School Certificate</h4>
+                <div class="company">
+                    <i class="fas fa-graduation-cap"></i>
+                    Shaheed Smrity High School
+                </div>
+                <p class="date">2016</p>
+                <p>Group: Arts and Humanities</p>
+            </div>
+        </div>
+        <!-- Certifications Section -->
+        <div class="section">
+            <h3 class="section-title">Certifications</h3>
+            
+            <!-- Featured Certifications -->
+            <div class="featured-cert">
+                <div class="featured-cert-content">
+                    <h4 class="featured-cert-name">Project Management</h4>
+                    <div class="certification-issuer">LinkedIn Learning</div>
+                    <div class="featured-cert-details">
+                        <div class="featured-cert-detail">
+                            <div class="featured-cert-label">Certificate ID</div>
+                            <div class="featured-cert-value">d5acaf7faa583301be4410e09bc2ccdc69d36852067aaa847fdce21b87369fbf</div>
+                        </div>
+                        <div class="featured-cert-detail">
+                            <div class="featured-cert-label">Year</div>
+                            <div class="featured-cert-value">2023</div>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/learning/certificates/d5acaf7faa583301be4410e09bc2ccdc69d36852067aaa847fdce21b87369fbf" target="_blank" class="featured-cert-verify">
+                        <i class="fas fa-external-link-alt"></i> Verify Certificate
+                    </a>
+                </div>
+                <i class="fas fa-certificate featured-cert-icon"></i>
+            </div>
+            
+            <div class="featured-cert">
+                <div class="featured-cert-content">
+                    <h4 class="featured-cert-name">Strategic Thinking</h4>
+                    <div class="certification-issuer">LinkedIn Learning</div>
+                    <div class="featured-cert-details">
+                        <div class="featured-cert-detail">
+                            <div class="featured-cert-label">Certificate ID</div>
+                            <div class="featured-cert-value">3162b127a7dcf05bce2f8c4b6069f8456e9b0d230286a7dbed945f07995fb9fa</div>
+                        </div>
+                        <div class="featured-cert-detail">
+                            <div class="featured-cert-label">Year</div>
+                            <div class="featured-cert-value">2023</div>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/learning/certificates/3162b127a7dcf05bce2f8c4b6069f8456e9b0d230286a7dbed945f07995fb9fa" target="_blank" class="featured-cert-verify">
+                        <i class="fas fa-external-link-alt"></i> Verify Certificate
+                    </a>
+                </div>
+                <i class="fas fa-lightbulb featured-cert-icon"></i>
+            </div>
+            
+            <div class="featured-cert">
+                <div class="featured-cert-content">
+                    <h4 class="featured-cert-name">Digital Marketing for Freelancing, Level-4</h4>
+                    <div class="certification-issuer">Government of Bangladesh - National Skills Development Authority (NSDA)</div>
+                    <div class="featured-cert-details">
+                        <div class="featured-cert-detail">
+                            <div class="featured-cert-label">Certificate ID</div>
+                            <div class="featured-cert-value">TT7blYkRqZ%2F6VtKNPQJLhA%3D%3D</div>
+                        </div>
+                        <div class="featured-cert-detail">
+                            <div class="featured-cert-label">Year</div>
+                            <div class="featured-cert-value">2024</div>
+                        </div>
+                    </div>
+                    <a href="https://www.skillsportal.gov.bd/#/rpl/certificate-view?rplCandidateId=TT7blYkRqZ%2F6VtKNPQJLhA%3D%3D" target="_blank" class="featured-cert-verify">
+                        <i class="fas fa-external-link-alt"></i> Verify Certificate
+                    </a>
+                </div>
+                <i class="fas fa-award featured-cert-icon"></i>
+            </div>
+            
+            <!-- Additional Certifications Grid -->
+            <div class="certification-grid">
+                <div class="certification-card">
+                    <div class="certification-name">Google Ads Search Certification</div>
+                    <div class="certification-issuer">Google</div>
+                    <div class="certification-year">2018</div>
+                    <div class="certification-verify">
+                        <a href="https://skillshop.credential.net/5cd1902d-94d7-4e2f-8e48-a79ab4db6b94#acc.IyntcsHU">
+                            <i class="fas fa-check-circle"></i> Verify
+                            
+                            </a>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-name">Google Ads Display Certification</div>
+                    <div class="certification-issuer">Google</div>
+                    <div class="certification-year">2018</div>
+                    <div class="certification-verify">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-name">Google Ads Video Certification</div>
+                    <div class="certification-issuer">Google</div>
+                    <div class="certification-year">2018</div>
+                    <div class="certification-verify">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-name">Google Analytics Individual Qualification</div>
+                    <div class="certification-issuer">Google</div>
+                    <div class="certification-year">2019</div>
+                    <div class="certification-verify">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-name">Meta Certified Digital Marketing Associate</div>
+                    <div class="certification-issuer">Meta</div>
+                    <div class="certification-year">2019</div>
+                    <div class="certification-verify">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-name">Meta Certified Media Buying Professional</div>
+                    <div class="certification-issuer">Meta</div>
+                    <div class="certification-year">2020</div>
+                    <div class="certification-verify">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-name">HubSpot Content Marketing Certification</div>
+                    <div class="certification-issuer">HubSpot</div>
+                    <div class="certification-year">2022</div>
+                    <div class="certification-verify">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-name">HubSpot Social Media Marketing Certification</div>
+                    <div class="certification-issuer">HubSpot</div>
+                    <div class="certification-year">2021</div>
+                    <div class="certification-verify">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-name">Microsoft Advertising Certification</div>
+                    <div class="certification-issuer">Microsoft</div>
+                    <div class="certification-year">2024</div>
+                    <div class="certification-verify">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

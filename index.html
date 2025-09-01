@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MD Sajjad Islam - Digital Marketing Manager</title>
+    <title> </title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/mk8r/img/refs/heads/main/favicon.ico">
@@ -216,6 +216,82 @@
         
         .contact-text {
             margin-left: 8px;
+        }
+        
+        .download-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            z-index: 10;
+        }
+        
+        .download-btn i {
+            font-size: 10px;
+        }
+        
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .pdf-instructions {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 10000;
+            max-width: 400px;
+            text-align: center;
+            display: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .pdf-instructions h3 {
+            margin-bottom: 15px;
+            color: #63b3ed;
+        }
+        
+        .pdf-instructions p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .pdf-instructions button {
+            background: #3182ce;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .pdf-instructions button:hover {
+            background: #2c5aa0;
+        }
+        
+        .mobile-instructions {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .main-content {
@@ -623,6 +699,12 @@
             .title {
                 font-size: 18px;
             }
+            .download-btn {
+                top: 15px;
+                right: 15px;
+                padding: 5px 10px;
+                font-size: 11px;
+            }
             .main-content {
                 padding: 25px 15px;
             }
@@ -666,6 +748,12 @@
             }
             .contact-item i {
                 margin-right: 5px;
+                font-size: 10px;
+            }
+            .download-btn {
+                top: 10px;
+                right: 10px;
+                padding: 4px 8px;
                 font-size: 10px;
             }
             .main-content {
@@ -743,9 +831,16 @@
                 margin-top: 10px;
                 font-size: 13px;
             }
+            .pdf-instructions {
+                max-width: 90%;
+                padding: 15px;
+            }
+            .mobile-instructions {
+                display: block;
+            }
         }
         
-        /* Print Styles */
+        /* Print Styles - Enhanced to preserve all colors and remove title from headers */
         @media print {
             body {
                 background: white;
@@ -760,13 +855,97 @@
                 background: #1a365d !important;
                 -webkit-print-color-adjust: exact;
                 color-adjust: exact;
+                print-color-adjust: exact;
             }
             .experience-item, .volunteer-item, .education-item, .skill-category, .certification-card, .featured-cert {
                 transform: none;
                 box-shadow: none;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
             }
             .cursor, .cursor-glow, .cursor-trail, .ripple {
                 display: none !important;
+            }
+            .download-btn {
+                display: none !important;
+            }
+            .pdf-instructions {
+                display: none !important;
+            }
+            
+            /* Preserve all background colors and gradients */
+            *, *::before, *::after {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* Ensure links are clickable in PDF */
+            a {
+                color: #3182ce !important;
+                text-decoration: underline !important;
+            }
+            
+            /* Preserve certification card styles */
+            .certification-card::before, .featured-cert::before {
+                background: linear-gradient(90deg, #3182ce, #63b3ed) !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* Preserve verify button styles */
+            .certification-verify, .featured-cert-verify {
+                background: linear-gradient(135deg, #3182ce 0%, #63b3ed 100%) !important;
+                color: white !important;
+                text-decoration: none !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .featured-cert-verify {
+                background: linear-gradient(135deg, #2b6cb0 0%, #3182ce 100%) !important;
+            }
+            
+            /* Preserve skill item styles */
+            .skill-item {
+                background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%) !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* Preserve volunteer highlight styles */
+            .volunteer-highlight {
+                background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;
+                border-left: 5px solid #f59e0b !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* Preserve featured cert styles */
+            .featured-cert {
+                background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%) !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* Preserve section title styles */
+            .section-title::after {
+                background: linear-gradient(90deg, #3182ce, #63b3ed) !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* Remove browser default headers and footers */
+            @page {
+                margin: 0.5in;
+                size: auto;
             }
         }
         
@@ -784,6 +963,26 @@
     <div class="cursor-glow"></div>
     <div class="cursor-trail"></div>
     <div class="ripple"></div>
+    
+    <!-- PDF Instructions Modal -->
+    <div class="pdf-instructions" id="pdfInstructions">
+        <h3>Download PDF Instructions</h3>
+        <p>1. In the print dialog, select "Save as PDF" as the destination.</p>
+        <p>2. Make sure "Background graphics" is enabled to preserve colors.</p>
+        <p>3. Disable "Headers and footers" to remove the title from PDF pages.</p>
+        <p>4. Click "Save" to download your CV as a PDF.</p>
+        <p><strong>Note:</strong> All links will remain clickable in the PDF.</p>
+        
+        <div class="mobile-instructions">
+            <h4>For Mobile Users:</h4>
+            <p>1. Tap the "Save as PDF" button below.</p>
+            <p>2. Follow your device's prompts to save the PDF.</p>
+            <p>3. The PDF will maintain all colors and formatting.</p>
+            <p>4. Make sure to disable headers and footers if the option is available.</p>
+        </div>
+        
+        <button id="closeInstructions">Got it!</button>
+    </div>
     
     <div class="cv-container">
         <!-- Header Section -->
@@ -826,6 +1025,10 @@
                         </a>
                     </div>
                 </div>
+                <button class="download-btn" id="downloadBtn">
+                    <i class="fas fa-download"></i>
+                    PDF
+                </button>
             </div>
         </div>
         
@@ -1197,11 +1400,28 @@
                             Verify
                         </a>
                     </div>
+                    
+                    <div class="certification-card">
+                        <div class="certification-name">Search Ads 360 Certification Exam</div>
+                        <div class="certification-issuer">Google</div>
+                        <div class="certification-year">2025</div>
+                        <a href="https://skillshop.credential.net/f7c18796-492d-4628-9f80-5a30983db49d" target="_blank" class="certification-verify">
+                            Verify
+                        </a>
+                    </div>
+                    
+                     <div class="certification-card">
+                        <div class="certification-name">Google Ads - Measurement CertificationExam</div>
+                        <div class="certification-issuer">Google</div>
+                        <div class="certification-year">2025</div>
+                        <a href="https://skillshop.credential.net/f5d19565-2551-456d-bab9-8c4b09a5fd4a#acc.8clwOsTx" target="_blank" class="certification-verify">
+                            Verify
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <script>
         // Custom Cursor Effect
         document.addEventListener('DOMContentLoaded', function() {
@@ -1367,6 +1587,43 @@
                     setTimeout(() => {
                         rippleClone.remove();
                     }, 1000);
+                }
+            });
+            
+            // PDF Download Functionality
+            const downloadBtn = document.getElementById('downloadBtn');
+            const pdfInstructions = document.getElementById('pdfInstructions');
+            const closeInstructions = document.getElementById('closeInstructions');
+            
+            downloadBtn.addEventListener('click', () => {
+                pdfInstructions.style.display = 'block';
+            });
+            
+            closeInstructions.addEventListener('click', () => {
+                pdfInstructions.style.display = 'none';
+                
+                // Check if mobile device
+                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                
+                if (isMobile) {
+                    // For mobile devices, use a more direct approach
+                    try {
+                        // Try to use the browser's print functionality
+                        window.print();
+                    } catch (e) {
+                        // If print fails, provide alternative instructions
+                        alert('Please use your browser\'s share menu and select "Print" to save as PDF.');
+                    }
+                } else {
+                    // For desktop, use the standard print dialog
+                    window.print();
+                }
+            });
+            
+            // Close instructions when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target === pdfInstructions) {
+                    pdfInstructions.style.display = 'none';
                 }
             });
         });

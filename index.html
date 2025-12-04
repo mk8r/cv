@@ -3,1628 +3,407 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> </title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/mk8r/img/refs/heads/main/favicon.ico">
+    <title>MD Sajjad Islam - Digital Marketing Manager</title>
+    <meta name="description" content="Professional Resume of MD Sajjad Islam, a Results-driven Digital Marketing Manager with 7+ years of experience.">
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter for clean, professional typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#1e293b',
+                        }
+                    },
+                    boxShadow: {
+                        '3d': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                        'inner-light': 'inset 0 2px 4px 0 rgba(255, 255, 255, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #2c3e50;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-            padding: 10px;
-            overflow-x: hidden;
+
+        /* 3D Card Hover Effect Class */
+        .hover-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
-        
-        /* Custom Cursor Styles */
-        .cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(49, 130, 206, 0.8) 0%, rgba(99, 179, 237, 0.4) 50%, rgba(49, 130, 206, 0) 70%);
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease;
-            box-shadow: 0 0 15px rgba(49, 130, 206, 0.6);
-            mix-blend-mode: screen;
-        }
-        
-        .cursor-glow {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(49, 130, 206, 0.4) 0%, rgba(99, 179, 237, 0.2) 50%, rgba(49, 130, 206, 0) 70%);
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 9998;
-            transition: transform 0.3s ease;
-        }
-        
-        .cursor-trail {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(49, 130, 206, 0.2) 0%, rgba(99, 179, 237, 0.1) 50%, rgba(49, 130, 206, 0) 70%);
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 9997;
-            transition: transform 0.5s ease;
-        }
-        
-        .ripple {
-            position: fixed;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(49, 130, 206, 0.3) 0%, rgba(99, 179, 237, 0.1) 50%, rgba(49, 130, 206, 0) 70%);
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 9996;
-            opacity: 0;
-        }
-        
-        .cv-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-            transition: transform 0.5s ease;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .cv-container:hover {
-            transform: translateY(-5px);
-        }
-        
-        /* Interactive elements cursor style */
-        a, button, .contact-item, .experience-item, .volunteer-item, .education-item, .skill-category, .certification-card, .featured-cert, .skill-item, .certification-verify, .featured-cert-verify {
-            cursor: pointer;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
-            color: white;
-            padding: 40px 30px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
-            opacity: 0.3;
-            z-index: 0;
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .name {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 42px;
-            font-weight: 900;
-            margin-bottom: 5px;
-            letter-spacing: -1px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            background: linear-gradient(90deg, #ffffff, #e2e8f0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-transform: uppercase;
-        }
-        
-        .title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #a0aec0;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            font-size: 14px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            background: rgba(255,255,255,0.1);
-            padding: 8px 12px;
-            border-radius: 50px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            flex: 1 1 calc(50% - 4px);
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .contact-item::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .contact-item:hover::before {
-            opacity: 1;
-        }
-        
-        .contact-item:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-3px);
-        }
-        
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .contact-item i {
-            margin-right: 8px;
-            color: #63b3ed;
-            font-size: 12px;
-        }
-        
-        .contact-item .phone-icons {
-            display: flex;
-            align-items: center;
-        }
-        
-        .contact-item .phone-icons a {
-            display: flex;
-            align-items: center;
-            margin-right: 5px;
-        }
-        
-        .contact-item .phone-icons a:last-child {
-            margin-right: 0;
-        }
-        
-        .contact-item .phone-icons i {
-            margin-right: 0;
-        }
-        
-        .contact-text {
-            margin-left: 8px;
-        }
-        
-        .download-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-            padding: 6px 12px;
-            font-size: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+        .hover-card:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
+            background-color: #f8fafc; /* slightly lighter bg on hover */
             z-index: 10;
-        }
-        
-        .download-btn i {
-            font-size: 10px;
-        }
-        
-        .download-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-        
-        .pdf-instructions {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.9);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            z-index: 10000;
-            max-width: 400px;
-            text-align: center;
-            display: none;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .pdf-instructions h3 {
-            margin-bottom: 15px;
-            color: #63b3ed;
-        }
-        
-        .pdf-instructions p {
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-        
-        .pdf-instructions button {
-            background: #3182ce;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 8px 15px;
-            margin-top: 10px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        
-        .pdf-instructions button:hover {
-            background: #2c5aa0;
-        }
-        
-        .mobile-instructions {
-            display: none;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .main-content {
-            padding: 30px 20px;
-        }
-        
-        .section {
-            margin-bottom: 30px;
             position: relative;
+            border-radius: 0.5rem;
         }
-        
-        .section-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #1a365d;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #e2e8f0;
-            position: relative;
+
+        /* Text Shadow for 3D feel */
+        .text-shadow-sm {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
         }
-        
-        .section-title::after {
-            content: "";
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, #3182ce, #63b3ed);
-            border-radius: 3px;
+        .text-shadow-md {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-        
-        .experience-item, .volunteer-item, .education-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f8fafc;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .experience-item::before, .volunteer-item::before, .education-item::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: linear-gradient(180deg, #3182ce, #63b3ed);
-            border-radius: 5px 0 0 5px;
-        }
-        
-        .experience-item:hover, .volunteer-item:hover, .education-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-        
-        .position {
-            font-size: 18px;
-            font-weight: 700;
-            color: #1a365d;
-            margin-bottom: 5px;
-        }
-        
-        .company {
-            font-size: 16px;
-            font-weight: 600;
-            color: #3182ce;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .company i {
-            margin-right: 8px;
-            color: #63b3ed;
-        }
-        
-        .date {
-            font-size: 14px;
-            color: #718096;
-            margin-bottom: 10px;
-            font-style: italic;
-        }
-        
-        ul {
-            padding-left: 15px;
-            margin-bottom: 10px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-        
-        .highlight {
-            color: #2b6cb0;
-            font-weight: 700;
-            background: rgba(49, 130, 206, 0.1);
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
-        
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-        }
-        
-        .skill-category {
-            background: #f8fafc;
-            border-radius: 15px;
-            padding: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .skill-category::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #3182ce, #63b3ed);
-        }
-        
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-        
-        .skill-category-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: #1a365d;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .skill-category-title i {
-            margin-right: 8px;
-            color: #3182ce;
-        }
-        
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-        
-        .skill-item {
-            background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
-            color: #2b6cb0;
-            padding: 6px 10px;
-            border-radius: 30px;
-            font-size: 12px;
-            font-weight: 600;
-            box-shadow: 0 4px 10px rgba(49, 130, 206, 0.15);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .skill-item::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .skill-item:hover::before {
-            opacity: 1;
-        }
-        
-        .skill-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(49, 130, 206, 0.25);
-        }
-        
-        .certification-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-        
-        .certification-card {
-            background: #f8fafc;
-            border-radius: 15px;
-            padding: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            height: 100%;
-        }
-        
-        .certification-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #3182ce, #63b3ed);
-        }
-        
-        .certification-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-        
-        .certification-name {
-            font-weight: 700;
-            color: #1a365d;
-            margin-bottom: 5px;
-            font-size: 14px;
-            line-height: 1.3;
-        }
-        
-        .certification-issuer {
-            font-size: 12px;
-            color: #4a5568;
-            margin-bottom: 5px;
-        }
-        
-        .certification-year {
-            font-size: 12px;
-            color: #718096;
-            margin-bottom: 10px;
-        }
-        
-        .certification-verify {
-            display: inline-block;
-            background: linear-gradient(135deg, #3182ce 0%, #63b3ed 100%);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 30px;
-            font-size: 12px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(49, 130, 206, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .certification-verify::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .certification-verify:hover::before {
-            opacity: 1;
-        }
-        
-        .certification-verify:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(49, 130, 206, 0.3);
-        }
-        
-        .featured-cert {
-            background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
-            border-radius: 15px;
-            padding: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .featured-cert::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #2b6cb0, #63b3ed);
-        }
-        
-        .featured-cert:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-        
-        .featured-cert-name {
-            font-size: 18px;
-            font-weight: 700;
-            color: #1a365d;
-            margin-bottom: 5px;
-        }
-        
-        .featured-cert-details {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin: 10px 0;
-        }
-        
-        .featured-cert-detail {
-            flex: 1;
-        }
-        
-        .featured-cert-label {
-            font-size: 12px;
-            color: #4a5568;
-            margin-bottom: 3px;
-        }
-        
-        .featured-cert-value {
-            font-size: 14px;
-            color: #2d3748;
-            font-weight: 600;
-            word-break: break-all;
-        }
-        
-        .featured-cert-verify {
-            display: inline-block;
-            background: linear-gradient(135deg, #2b6cb0 0%, #3182ce 100%);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 30px;
-            font-size: 14px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(43, 108, 176, 0.2);
-            margin-top: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .featured-cert-verify::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .featured-cert-verify:hover::before {
-            opacity: 1;
-        }
-        
-        .featured-cert-verify:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(43, 108, 176, 0.3);
-        }
-        
-        .volunteer-highlight {
-            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-            padding: 15px;
-            border-radius: 15px;
-            margin-top: 15px;
-            font-style: italic;
-            color: #78350f;
-            border-left: 5px solid #f59e0b;
-            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .volunteer-highlight:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(245, 158, 11, 0.2);
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .skills-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .certification-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header {
-                padding: 30px 20px;
-            }
-            .name {
-                font-size: 32px;
-            }
-            .title {
-                font-size: 18px;
-            }
-            .download-btn {
-                top: 15px;
-                right: 15px;
-                padding: 5px 10px;
-                font-size: 11px;
-            }
-            .main-content {
-                padding: 25px 15px;
-            }
-            .section-title {
-                font-size: 20px;
-            }
-            .position {
-                font-size: 16px;
-            }
-            .company {
-                font-size: 15px;
-            }
-            .certification-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 576px) {
-            body {
-                padding: 5px;
-            }
-            .cv-container {
-                border-radius: 10px;
-            }
-            .header {
-                padding: 20px 15px;
-            }
-            .name {
-                font-size: 28px;
-            }
-            .title {
-                font-size: 16px;
-                margin-bottom: 15px;
-            }
-            .contact-info {
-                gap: 5px;
-            }
-            .contact-item {
-                padding: 6px 10px;
-                font-size: 12px;
-            }
-            .contact-item i {
-                margin-right: 5px;
-                font-size: 10px;
-            }
-            .download-btn {
-                top: 10px;
-                right: 10px;
-                padding: 4px 8px;
-                font-size: 10px;
-            }
-            .main-content {
-                padding: 20px 15px;
-            }
-            .section-title {
-                font-size: 18px;
-                margin-bottom: 15px;
-                padding-bottom: 8px;
-            }
-            .section-title::after {
-                width: 40px;
-            }
-            .experience-item, .volunteer-item, .education-item {
-                padding: 12px;
-                margin-bottom: 15px;
-            }
-            .position {
-                font-size: 15px;
-            }
-            .company {
-                font-size: 14px;
-            }
-            .date {
-                font-size: 12px;
-                margin-bottom: 8px;
-            }
-            li {
-                font-size: 13px;
-                margin-bottom: 6px;
-            }
-            .featured-cert {
-                padding: 12px;
-                margin-bottom: 12px;
-            }
-            .featured-cert-name {
-                font-size: 16px;
-            }
-            .featured-cert-details {
-                gap: 8px;
-            }
-            .featured-cert-label {
-                font-size: 11px;
-            }
-            .featured-cert-value {
-                font-size: 12px;
-            }
-            .featured-cert-verify {
-                padding: 6px 12px;
-                font-size: 12px;
-                margin-top: 8px;
-            }
-            .certification-grid {
-                grid-template-columns: 1fr;
-            }
-            .certification-card {
-                padding: 12px;
-            }
-            .certification-name {
-                font-size: 13px;
-            }
-            .certification-issuer {
-                font-size: 11px;
-            }
-            .certification-year {
-                font-size: 11px;
-                margin-bottom: 8px;
-            }
-            .certification-verify {
-                padding: 5px 10px;
-                font-size: 11px;
-            }
-            .volunteer-highlight {
-                padding: 12px;
-                margin-top: 10px;
-                font-size: 13px;
-            }
-            .pdf-instructions {
-                max-width: 90%;
-                padding: 15px;
-            }
-            .mobile-instructions {
-                display: block;
-            }
-        }
-        
-        /* Print Styles - Enhanced to preserve all colors and remove title from headers */
+
+        /* Custom Print Styles - Updated for "Exact Webview" */
         @media print {
+            /* Force background colors to print */
             body {
-                background: white;
-                padding: 0;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                background-color: white !important; /* Print on white paper */
+                background-image: none !important;
             }
-            .cv-container {
-                box-shadow: none;
-                max-width: 100%;
-                transform: none;
+
+            /* Remove 3D transforms for print */
+            .hover-card:hover {
+                transform: none !important;
+                box-shadow: none !important;
+                background-color: transparent !important;
             }
-            .header {
-                background: #1a365d !important;
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-                print-color-adjust: exact;
+            .hover-card {
+                padding: 0 !important;
+                margin: 0 !important;
+                border-radius: 0 !important;
             }
-            .experience-item, .volunteer-item, .education-item, .skill-category, .certification-card, .featured-cert {
-                transform: none;
-                box-shadow: none;
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            .cursor, .cursor-glow, .cursor-trail, .ripple {
+
+            /* Hide the floating print button */
+            .no-print {
                 display: none !important;
             }
-            .download-btn {
-                display: none !important;
-            }
-            .pdf-instructions {
-                display: none !important;
-            }
-            
-            /* Preserve all background colors and gradients */
-            *, *::before, *::after {
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            /* Ensure links are clickable in PDF */
+
+            /* Ensure links look like text, not blue underlined unless desired */
             a {
-                color: #3182ce !important;
-                text-decoration: underline !important;
+                text-decoration: none;
+                color: inherit;
+            }
+
+            /* Main container adjustments for print page size */
+            .container {
+                max-width: 100% !important;
+                width: 100% !important;
+                box-shadow: none !important; /* Shadows don't print well */
+                margin: 0 !important;
+                border-radius: 0 !important;
+                transform: none !important; /* Remove any entrance animations */
+            }
+
+            /* Ensure the layout remains a grid (Sidebar on right) */
+            /* We override Tailwind's responsive hiding if needed, but md:grid-cols-3 usually works if page is wide enough.
+               For print, we force the desktop layout. */
+            .md\:grid-cols-3 {
+                display: grid !important;
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
             }
             
-            /* Preserve certification card styles */
-            .certification-card::before, .featured-cert::before {
-                background: linear-gradient(90deg, #3182ce, #63b3ed) !important;
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-                print-color-adjust: exact;
+            .md\:col-span-2 {
+                grid-column: span 2 / span 2 !important;
             }
             
-            /* Preserve verify button styles */
-            .certification-verify, .featured-cert-verify {
-                background: linear-gradient(135deg, #3182ce 0%, #63b3ed 100%) !important;
-                color: white !important;
-                text-decoration: none !important;
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-                print-color-adjust: exact;
+            .md\:col-span-1 {
+                grid-column: span 1 / span 1 !important;
+                border-left-width: 1px !important; /* Ensure sidebar border prints */
+                border-color: #e2e8f0 !important; /* slate-200 */
+            }
+
+            /* Page Break Management */
+            section, .mb-8, .mb-10 {
+                break-inside: avoid; /* Prevent cutting a job description in half */
             }
             
-            .featured-cert-verify {
-                background: linear-gradient(135deg, #2b6cb0 0%, #3182ce 100%) !important;
-            }
-            
-            /* Preserve skill item styles */
-            .skill-item {
-                background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%) !important;
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            /* Preserve volunteer highlight styles */
-            .volunteer-highlight {
-                background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;
-                border-left: 5px solid #f59e0b !important;
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            /* Preserve featured cert styles */
-            .featured-cert {
-                background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%) !important;
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            /* Preserve section title styles */
-            .section-title::after {
-                background: linear-gradient(90deg, #3182ce, #63b3ed) !important;
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            /* Remove browser default headers and footers */
-            @page {
-                margin: 0.5in;
-                size: auto;
-            }
+            /* Text sizing adjustments for print legibility if needed, or keep as is */
         }
-        
-        /* Mobile cursor visibility */
-        @media (hover: none) {
-            .cursor, .cursor-glow, .cursor-trail {
-                display: none;
-            }
+
+        /* Simple Entrance Animation */
+        @keyframes float-up {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-enter {
+            animation: float-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        /* Dynamic Title Transition */
+        .dynamic-title {
+            transition: opacity 0.3s ease-in-out;
+            display: inline-block;
+        }
+        .fade-out {
+            opacity: 0;
         }
     </style>
 </head>
-<body>
-    <!-- Custom Cursor Effect Elements -->
-    <div class="cursor"></div>
-    <div class="cursor-glow"></div>
-    <div class="cursor-trail"></div>
-    <div class="ripple"></div>
-    
-    <!-- PDF Instructions Modal -->
-    <div class="pdf-instructions" id="pdfInstructions">
-        <h3>Download CV Instructions</h3>
-        <p>1. In the print dialog, select "Save as PDF" as the destination.</p>
-        
-        <p>2. Click "Save" to download your CV as a PDF.</p>
-        
-        <div class="mobile-instructions">
-          <!--   <h4>For Mobile Users:</h4>
-            <p>1. Tap the "Save as PDF" button below.</p>
-            <p>2. Follow your device's prompts to save the PDF.</p>
-            <p>3. The PDF will maintain all colors and formatting.</p>
-            <p>4. Make sure to disable headers and footers if the option is available.</p> -->
-        </div>
-        
-        <button id="closeInstructions">Got it!</button>
+<body class="bg-gradient-to-br from-slate-200 to-gray-300 font-sans text-gray-800 antialiased min-h-screen flex flex-col items-center py-8 sm:px-4 print:bg-white print:py-0">
+
+    <!-- Action Buttons (Hidden when printing) -->
+    <div class="no-print fixed bottom-6 right-6 flex flex-col gap-3 z-50 animate-enter" style="animation-delay: 0.5s;">
+        <a href="https://raw.githubusercontent.com/mk8r/cv.pdf/5edc76717ebe6502da7cd1104d8dae0aa11275d8/sajjadcv2025.pdf" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 hover:-translate-y-1 active:scale-95 transition-all duration-300 flex items-center justify-center group border border-white/20" title="Download Original PDF">
+            <i data-lucide="printer" class="w-6 h-6 drop-shadow-md"></i>
+        </a>
     </div>
-    
-    <div class="cv-container">
+
+    <!-- Main Resume Container -->
+    <main class="container max-w-5xl bg-white shadow-2xl rounded-lg overflow-hidden print:shadow-none print:rounded-none w-full animate-enter ring-1 ring-black/5">
+        
         <!-- Header Section -->
-        <div class="header">
-            <div class="header-content">
-                <h1 class="name">MD Sajjad Islam</h1>
-                <h2 class="title">Digital Marketing Manager</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <a href="mailto:sharian.saju@gmail.com">
-                            <i class="fas fa-envelope"></i>
-                            sharian.saju@gmail.com
-                        </a>
+        <header class="bg-slate-900 text-white p-8 md:p-12 print:bg-slate-900 print:text-white print:p-8 relative overflow-hidden">
+            <!-- Subtle gradient overlay for depth -->
+            <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2 text-shadow-md">MD Sajjad Islam</h1>
+                    <!-- UPDATED: Dynamic Title Section -->
+                    <p class="text-xl text-blue-200 font-medium print:text-blue-200 text-shadow-sm h-8 flex items-center">
+                        <span class="dynamic-title">Digital Marketing Manager</span>
+                    </p>
+                </div>
+                <div class="mt-6 md:mt-0 flex flex-col gap-2 text-sm text-gray-300 print:text-gray-300 print:text-right">
+                    <div class="flex items-center gap-2 print:justify-end hover:text-white transition-colors duration-200">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        <span>Wari, Dhaka, Bangladesh</span>
                     </div>
-                    <div class="contact-item">
-                        <div class="phone-icons">
-                            <a href="tel:+8801942488252">
-                                <i class="fas fa-phone"></i>
-                            </a>
-                            <a href="https://wa.me/8801942488252" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
+                    <div class="flex items-center gap-2 print:justify-end hover:text-white transition-colors duration-200">
+                        <div class="flex items-center gap-1" title="Phone and WhatsApp">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            <span class="text-gray-500">/</span>
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
                         </div>
-                        <span class="contact-text">+8801942488252</span>
+                        <a href="tel:+8801942488252" class="hover:text-blue-200 transition-colors">+880 194 248 8252</a>
                     </div>
-                    <div class="contact-item">
-                        <a href="https://bd.linkedin.com/in/shariansaju" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                            LinkedIn/shariansaju
-                        </a>
+                    <div class="flex items-center gap-2 print:justify-end hover:text-white transition-colors duration-200">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        <a href="mailto:sharian.saju@gmail.com" class="hover:text-blue-200 transition-colors">sharian.saju@gmail.com</a>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Wari, Dhaka - Bangladesh
-                    </div>
-                    <div class="contact-item">
-                        <a href="https://mk8r.github.io/portfolio" target="_blank">
-                            <i class="fas fa-briefcase"></i>
-                            Portfolio
-                        </a>
+                    <div class="flex items-center gap-4 mt-2 print:hidden">
+                        <!-- Updated Links with 3D button feel -->
+                        <a href="https://www.linkedin.com/in/shariansaju/" target="_blank" class="bg-blue-600 hover:bg-blue-500 shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 active:translate-y-0 active:shadow-sm text-white px-4 py-1.5 rounded-md text-xs font-semibold transition-all border-b-2 border-blue-800 hover:border-blue-700">LinkedIn</a>
+                        <a href="https://mk8r.github.io/works" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 shadow-lg hover:shadow-emerald-500/30 hover:-translate-y-0.5 active:translate-y-0 active:shadow-sm text-white px-4 py-1.5 rounded-md text-xs font-semibold transition-all border-b-2 border-emerald-800 hover:border-emerald-700">Portfolio</a>
                     </div>
                 </div>
-                <button class="download-btn" id="downloadBtn">
-                    <i class="fas fa-download"></i>
-                    PDF
-                </button>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8">
+            
+            <!-- Left Column (Main Content) -->
+            <div class="md:col-span-2 p-8 md:p-12 md:pr-4">
+                
+                <!-- Professional Summary -->
+                <section class="mb-10 hover-card p-4 -mx-4 rounded-lg">
+                    <h2 class="text-xl font-bold text-slate-800 uppercase tracking-wider border-b-2 border-slate-200 pb-2 mb-4">Professional Summary</h2>
+                    <p class="text-gray-600 leading-relaxed text-justify">
+                        Results-driven Digital Marketing Manager with 7+ years of experience leading global performance campaigns across Meta, Google, LinkedIn, and TikTok. Proven success in scaling revenue, optimizing marketing funnels, and building high-performing teams. Expert in analytics, paid media strategy, and growth marketing, with a record of driving measurable ROI and delivering 95% of projects ahead of schedule in fast-paced, remote environments.
+                    </p>
+                </section>
+
+                <!-- Experience -->
+                <section class="mb-10">
+                    <h2 class="text-xl font-bold text-slate-800 uppercase tracking-wider border-b-2 border-slate-200 pb-2 mb-6">Professional Experience</h2>
+                    
+                    <!-- Job 1 -->
+                    <div class="mb-6 hover-card p-4 -mx-4 rounded-lg group">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline mb-2">
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition-colors">ScaleUp Ads Agency (Betopia Group)</h3>
+                            <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded border border-blue-100">Nov 2024 - Present</span>
+                        </div>
+                        <div class="text-sm text-gray-500 font-medium mb-3 italic">Sr. Digital Manager | Team Lead (SEM & SMM) • Dhaka, Bangladesh</div>
+                        <ul class="list-disc list-outside ml-4 space-y-1 text-gray-600 text-sm marker:text-blue-300">
+                            <li>Promoted to Team Lead within 3 months; managed 600+ projects across global markets.</li>
+                            <li>Directed Google Ads, YouTube, Meta, and TikTok campaigns, improving ROI and CTR across industries.</li>
+                            <li>Recruited and mentored a 47-member SMM/SEM team, boosting engagement metrics by 40% in 6 months.</li>
+                            <li>Developed scalable campaign frameworks that consistently exceeded performance targets.</li>
+                            <li>Designed and managed social media content calendars, cross-platform strategy, and client reporting dashboards.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="mb-6 hover-card p-4 -mx-4 rounded-lg group">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline mb-2">
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition-colors">MOONTON Games</h3>
+                            <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded border border-blue-100">Feb 2022 - Jun 2024</span>
+                        </div>
+                        <div class="text-sm text-gray-500 font-medium mb-3 italic">Marketing Manager & KOL Management • Shanghai, China (Hybrid)</div>
+                        <ul class="list-disc list-outside ml-4 space-y-1 text-gray-600 text-sm marker:text-blue-300">
+                            <li>Spearheaded marketing and community growth for Mobile Legends: Bang Bang (MLBB) in the South Asian market, increasing brand visibility and player engagement by 40%.</li>
+                            <li>Established the regional grassroots esports ecosystem by launching and managing inaugural tournaments in Bangladesh (Invitational, MBCC) and Nepal (MNCC).</li>
+                            <li>Played a key role in the successful product localization and launch of the MLBB Bengali language version to drive player acquisition and enhance user experience.</li>
+                            <li>Managed end-to-end KOL/influencer campaigns and creative community events to boost player retention and user-generated content.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="mb-6 hover-card p-4 -mx-4 rounded-lg group">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline mb-2">
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition-colors">BIGO Technology PTE. LTD.</h3>
+                            <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded border border-blue-100">Jan 2019 - Feb 2022</span>
+                        </div>
+                        <div class="text-sm text-gray-500 font-medium mb-3 italic">Marketing Manager & Moderator • Singapore</div>
+                        <ul class="list-disc list-outside ml-4 space-y-1 text-gray-600 text-sm marker:text-blue-300">
+                            <li>Key founding member of Likee Bangladesh; devised GTM strategy scaling user base from 0 to 100M+ in two years.</li>
+                            <li>Architected comprehensive marketing strategy combining online campaigns, offline events, and strategic partnerships.</li>
+                            <li>Built the nation's largest short-form video creator ecosystem, recruiting and managing 4,000+ influencers and 5,000+ live hosts.</li>
+                            <li>Leveraged experience as a top platform creator (2M+ followers) to provide product feedback and guide UI/UX improvements.</li>
+                            <li>Directed regional push notification strategy, designing targeted campaigns that boosted user engagement.</li>
+                            <li>Contributed to growth initiatives for other ByteDance products, including Lark, Helo, and Bigo.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                 <!-- Additional Highlights (Moved to main column for better flow) -->
+                 <section class="hover-card p-4 -mx-4 rounded-lg">
+                    <h2 class="text-xl font-bold text-slate-800 uppercase tracking-wider border-b-2 border-slate-200 pb-2 mb-4">Highlights</h2>
+                    <ul class="list-disc list-outside ml-4 space-y-1 text-gray-600 text-sm marker:text-blue-300">
+                        <li>Excel in remote collaboration and cross-time-zone project delivery.</li>
+                        <li>Proficient in managing multi-channel campaigns for SaaS, gaming, and agency clients.</li>
+                        <li>Passionate about mentorship, innovation, and continuous learning in the digital ecosystem.</li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <!-- Right Column (Sidebar) -->
+            <div class="bg-slate-50 md:col-span-1 p-8 md:p-12 md:pl-4 md:border-l border-slate-200 print:bg-slate-50 print:border-l print:border-slate-200">
+                
+                <!-- Core Competencies -->
+                <section class="mb-10">
+                    <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-slate-300 pb-1">Core Competencies</h2>
+                    
+                    <div class="mb-4 hover-card p-3 -mx-3 rounded bg-white border border-transparent hover:border-slate-100 transition-all">
+                        <h4 class="text-sm font-semibold text-blue-700 mb-1">Digital Strategy & Leadership</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">Performance Marketing, Growth Marketing (GTM, A/B Testing), Team Leadership & Mentorship, Brand Strategy.</p>
+                    </div>
+
+                    <div class="mb-4 hover-card p-3 -mx-3 rounded bg-white border border-transparent hover:border-slate-100 transition-all">
+                        <h4 class="text-sm font-semibold text-blue-700 mb-1">Paid Media Platforms</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">Google Ads (Search, Display, Video, Shopping, SA360), Meta Business Suite, TikTok Ads, LinkedIn Campaign Manager.</p>
+                    </div>
+
+                    <div class="mb-4 hover-card p-3 -mx-3 rounded bg-white border border-transparent hover:border-slate-100 transition-all">
+                        <h4 class="text-sm font-semibold text-blue-700 mb-1">Analytics & Optimization</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">GA4, Looker Studio, Tableau, Power BI, Conversion Rate Optimization (CRO), Funnel Analysis.</p>
+                    </div>
+
+                    <div class="mb-0 hover-card p-3 -mx-3 rounded bg-white border border-transparent hover:border-slate-100 transition-all">
+                        <h4 class="text-sm font-semibold text-blue-700 mb-1">Marketing Tech</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">HubSpot, GHL, WordPress, Canva, Buffer, Notion, SEMrush, Similarweb.</p>
+                    </div>
+                </section>
+
+                <!-- Certifications -->
+                <section class="mb-10 hover-card p-4 -mx-4 rounded-lg">
+                    <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-slate-300 pb-1">Certifications</h2>
+                    <ul class="space-y-3">
+                        <li class="text-xs text-gray-600">
+                            <strong class="block text-gray-800">Google Ads Suite & SA360</strong>
+                            <span class="text-gray-500">2025</span>
+                        </li>
+                        <li class="text-xs text-gray-600">
+                            <strong class="block text-gray-800">HubSpot Inbound Marketing</strong>
+                            <span class="text-gray-500">2025</span>
+                        </li>
+                        <li class="text-xs text-gray-600">
+                            <strong class="block text-gray-800">Meta Certified Media Buying</strong>
+                            <span class="text-gray-500">2024</span>
+                        </li>
+                        <li class="text-xs text-gray-600">
+                            <strong class="block text-gray-800">Microsoft Advertising</strong>
+                            <span class="text-gray-500">2024</span>
+                        </li>
+                         <li class="text-xs text-gray-600">
+                            <strong class="block text-gray-800">Digital Marketing (Level-4, NSDA)</strong>
+                            <span class="text-gray-500">Gov. of Bangladesh, 2024</span>
+                        </li>
+                        <li class="text-xs text-gray-600">
+                            <strong class="block text-gray-800">Google Analytics (GAIQ)</strong>
+                            <span class="text-gray-500">2023</span>
+                        </li>
+                        <li class="text-xs text-gray-600">
+                            <strong class="block text-gray-800">Project Management</strong>
+                            <span class="text-gray-500">LinkedIn Learning, 2023</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Education -->
+                <section class="hover-card p-4 -mx-4 rounded-lg">
+                    <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-slate-300 pb-1">Education</h2>
+                    <div class="mb-3">
+                        <h4 class="text-sm font-bold text-gray-800">Higher Secondary School Certificate (HSC)</h4>
+                        <p class="text-xs text-gray-600">Shaikh Burhanuddin Post Graduate College</p>
+                        <p class="text-xs text-gray-500">Dhaka, Bangladesh</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-gray-800">Secondary School Certificate (SSC)</h4>
+                        <p class="text-xs text-gray-600">Shaheed Smrity High School</p>
+                        <p class="text-xs text-gray-500">Dhaka, Bangladesh</p>
+                    </div>
+                </section>
+                
             </div>
         </div>
         
-        <div class="main-content">
-            <!-- Professional Summary Section -->
-            <div class="section">
-                <h3 class="section-title">Professional Summary</h3>
-                <p>Digital marketing manager with <span class="highlight">over 7 years of experience</span> in creating and executing successful marketing strategies to drive business growth. Proven track record of boosting brand awareness and product engagement through targeted campaigns and events. Skilled in using data analysis and market research to identify opportunities and trends, and leading cross-functional teams to execute campaigns on time and within budget. Experienced in managing budgets and using digital marketing tools to improve ROI.</p>
-            </div>
-            
-            <!-- Professional Experience Section -->
-            <div class="section">
-                <h3 class="section-title">Professional Experience</h3>
-                
-                <div class="experience-item">
-                    <h4 class="position">Leader of SEM & SMM | Digital Marketing Manager</h4>
-                    <div class="company">
-                        <i class="fas fa-building"></i>
-                        ScaleUp Ads Agency (Betopia Group)
-                    </div>
-                    <div class="date">November 2024 – Present</div>
-                    <ul>
-                        <li>Promoted to Team Leader after three months</li>
-                        <li>Spearheaded <span class="highlight">300+ digital marketing projects</span></li>
-                        <li>Led high-performing Social Media Marketing team</li>
-                        <li>Managed SEM campaigns (Google Ads, YouTube)</li>
-                        <li>Directed SMM campaigns (Meta, TikTok)</li>
-                        <li>Optimized campaign performance and ROI</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-item">
-                    <h4 class="position">Marketing Manager & KOL Management</h4>
-                    <div class="company">
-                        <i class="fas fa-building"></i>
-                        SHANGHAI MOONTON TECHNOLOGY CO., LTD (MOONTON Games)
-                    </div>
-                    <div class="date">Feb 2022 – Jun 2024</div>
-                    <ul>
-                        <li>Trade show and event planning and management</li>
-                        <li>Marketing strategy development</li>
-                        <li>Influencer marketing and management</li>
-                        <li>Campaign planning and execution</li>
-                        <li>Market research and analysis</li>
-                        <li>Content marketing and budget management</li>
-                        <li>Cross-functional team leadership</li>
-                        <li>Digital marketing and social media management</li>
-                        <li>Customer engagement and creative problem-solving</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-item">
-                    <h4 class="position">Marketing Manager & Moderator</h4>
-                    <div class="company">
-                        <i class="fas fa-building"></i>
-                        BIGO TECHNOLOGY PTE. LTD.
-                    </div>
-                    <div class="date">2019 – 2022</div>
-                    <ul>
-                        <li>Marketing strategy development and implementation</li>
-                        <li>In-app system management and moderation</li>
-                        <li>Influencer marketing and campaign planning</li>
-                        <li>Market research and analysis</li>
-                        <li>Budget management and cost control</li>
-                        <li>Cross-functional team leadership</li>
-                        <li>Digital marketing and social media management</li>
-                        <li>Customer engagement and copywriting</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Volunteer Experience Section -->
-            <div class="section">
-                <h3 class="section-title">Volunteer Experience</h3>
-                
-                <div class="volunteer-item">
-                    <h4 class="position">Volunteer Marketing Manager</h4>
-                    <div class="company">
-                        <i class="fas fa-handshake"></i>
-                        Vivo Bangladesh
-                    </div>
-                    <div class="date">2021</div>
-                    <ul>
-                        <li>Managed team of 10 volunteers</li>
-                        <li>Created product launch campaign</li>
-                        <li>Executed multi-channel marketing plan</li>
-                        <li>Achieved <span class="highlight">15% increase in sales</span></li>
-                        <li>Collaborated with social media influencers</li>
-                        <li>Trained and mentored junior volunteers</li>
-                    </ul>
-                </div>
-                
-                <div class="volunteer-item">
-                    <h4 class="position">Volunteer Marketing Helper</h4>
-                    <div class="company">
-                        <i class="fas fa-handshake"></i>
-                        OPPO
-                    </div>
-                    <div class="date">2021</div>
-                    <ul>
-                        <li>Created engaging content (blog, videos)</li>
-                        <li>Built relationships with influencers and media</li>
-                        <li>Collaborated with social media influencers</li>
-                    </ul>
-                </div>
-                
-                <!-- Additional Volunteer Experience Section -->
-                <div class="section">
-                    <h3 class="section-title">Additional Volunteer Experience</h3>
-                    <div class="volunteer-highlight">
-                        Extensive volunteer works and partner projects completed as digital marketer, creating impactful campaigns and fostering brand partnerships.
-                    </div>
-                    <div class="volunteer-highlight">
-                        Participated in numerous partner works and volunteer initiatives, leveraging digital marketing expertise to support brand initiatives.
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Skills & Expertise Section -->
-            <div class="section">
-                <h3 class="section-title">Skills & Expertise</h3>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h4 class="skill-category-title">
-                            <i class="fas fa-bullhorn"></i>
-                            Marketing
-                        </h4>
-                        <div class="skill-list">
-                            <span class="skill-item">Strategy</span>
-                            <span class="skill-item">Campaign</span>
-                            <span class="skill-item">Brand</span>
-                            <span class="skill-item">Engagement</span>
-                            <span class="skill-item">Events</span>
-                            <span class="skill-item">Influencer</span>
-                            <span class="skill-item">Content</span>
-                            <span class="skill-item">Growth</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4 class="skill-category-title">
-                            <i class="fas fa-chart-line"></i>
-                            Analytical
-                        </h4>
-                        <div class="skill-list">
-                            <span class="skill-item">Research</span>
-                            <span class="skill-item">Data Analysis</span>
-                            <span class="skill-item">ROI</span>
-                            <span class="skill-item">Tracking</span>
-                            <span class="skill-item">A/B Testing</span>
-                            <span class="skill-item">CRO</span>
-                            <span class="skill-item">Analytics</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4 class="skill-category-title">
-                            <i class="fas fa-users"></i>
-                            Leadership
-                        </h4>
-                        <div class="skill-list">
-                            <span class="skill-item">Budget</span>
-                            <span class="skill-item">Team</span>
-                            <span class="skill-item">Automation</span>
-                            <span class="skill-item">CRM</span>
-                            <span class="skill-item">Planning</span>
-                            <span class="skill-item">Collaboration</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4 class="skill-category-title">
-                            <i class="fas fa-laptop-code"></i>
-                            Technical
-                        </h4>
-                        <div class="skill-list">
-                            <span class="skill-item">Google Ads</span>
-                            <span class="skill-item">Analytics</span>
-                            <span class="skill-item">WordPress</span>
-                            <span class="skill-item">Meta</span>
-                            <span class="skill-item">SEMrush</span>
-                            <span class="skill-item">HubSpot</span>
-                            <span class="skill-item">Canva</span>
-                            <span class="skill-item">Adobe</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Education Section -->
-            <div class="section">
-                <h3 class="section-title">Education</h3>
-                
-                <div class="education-item">
-                    <h4 class="position">Higher Secondary School Certificate</h4>
-                    <div class="company">
-                        <i class="fas fa-graduation-cap"></i>
-                        Shaikh Burhanuddin Post Graduate College
-                    </div>
-                    <div class="date">2022</div>
-                    <p>Group: Arts and Humanities</p>
-                </div>
-                
-                <div class="education-item">
-                    <h4 class="position">Secondary School Certificate</h4>
-                    <div class="company">
-                        <i class="fas fa-graduation-cap"></i>
-                        Shaheed Smrity High School
-                    </div>
-                    <div class="date">2016</div>
-                    <p>Group: Arts and Humanities</p>
-                </div>
-            </div>
-            
-            <!-- Certifications Section -->
-            <div class="section">
-                <h3 class="section-title">Certifications</h3>
-                
-                <!-- Featured Certifications -->
-                <div class="featured-cert">
-                    <h4 class="featured-cert-name">Project Management</h4>
-                    <div class="certification-issuer">LinkedIn Learning</div>
-                    <div class="featured-cert-details">
-                        <div class="featured-cert-detail">
-                            <div class="featured-cert-label">Certificate ID</div>
-                            <div class="featured-cert-value">d5acaf7faa583301be4410e09bc2ccdc69d36852067aaa847fdce21b87369fbf</div>
-                        </div>
-                        <div class="featured-cert-detail">
-                            <div class="featured-cert-label">Year</div>
-                            <div class="featured-cert-value">2023</div>
-                        </div>
-                    </div>
-                    <a href="https://www.linkedin.com/learning/certificates/d5acaf7faa583301be4410e09bc2ccdc69d36852067aaa847fdce21b87369fbf" target="_blank" class="featured-cert-verify">
-                        <i class="fas fa-external-link-alt"></i> Verify
-                    </a>
-                </div>
-                
-                <div class="featured-cert">
-                    <h4 class="featured-cert-name">Strategic Thinking</h4>
-                    <div class="certification-issuer">LinkedIn Learning</div>
-                    <div class="featured-cert-details">
-                        <div class="featured-cert-detail">
-                            <div class="featured-cert-label">Certificate ID</div>
-                            <div class="featured-cert-value">3162b127a7dcf05bce2f8c4b6069f8456e9b0d230286a7dbed945f07995fb9fa</div>
-                        </div>
-                        <div class="featured-cert-detail">
-                            <div class="featured-cert-label">Year</div>
-                            <div class="featured-cert-value">2023</div>
-                        </div>
-                    </div>
-                    <a href="https://www.linkedin.com/learning/certificates/3162b127a7dcf05bce2f8c4b6069f8456e9b0d230286a7dbed945f07995fb9fa" target="_blank" class="featured-cert-verify">
-                        <i class="fas fa-external-link-alt"></i> Verify
-                    </a>
-                </div>
-                
-                <div class="featured-cert">
-                    <h4 class="featured-cert-name">Digital Marketing for Freelancing, Level-4</h4>
-                    <div class="certification-issuer">Government of Bangladesh - National Skills Development Authority (NSDA)</div>
-                    <div class="featured-cert-details">
-                        <div class="featured-cert-detail">
-                            <div class="featured-cert-label">Certificate ID</div>
-                            <div class="featured-cert-value">TT7blYkRqZ%2F6VtKNPQJLhA%3D%3D</div>
-                        </div>
-                        <div class="featured-cert-detail">
-                            <div class="featured-cert-label">Year</div>
-                            <div class="featured-cert-value">2024</div>
-                        </div>
-                    </div>
-                    <a href="https://www.skillsportal.gov.bd/#/rpl/certificate-view?rplCandidateId=TT7blYkRqZ%2F6VtKNPQJLhA%3D%3D" target="_blank" class="featured-cert-verify">
-                        <i class="fas fa-external-link-alt"></i> Verify
-                    </a>
-                </div>
-                
-                <!-- Additional Certifications Grid -->
-                <div class="certification-grid">
-                    <div class="certification-card">
-                        <div class="certification-name">Google Ads Search Certification</div>
-                        <div class="certification-issuer">Google</div>
-                        <div class="certification-year">2025</div>
-                        <a href="https://skillshop.credential.net/5cd1902d-94d7-4e2f-8e48-a79ab4db6b94#acc.IyntcsHU" target="_blank" class="certification-verify">
-                            Verify
-                        </a>
-                    </div>
-                    
-                    <div class="certification-card">
-                        <div class="certification-name">Google Ads Display Certification</div>
-                        <div class="certification-issuer">Google</div>
-                        <div class="certification-year">2025</div>
-                        <div class="certification-verify">Verified</div>
-                    </div>
-                    
-                    <div class="certification-card">
-                        <div class="certification-name">Google Ads Video Certification</div>
-                        <div class="certification-issuer">Google</div>
-                        <div class="certification-year">2025</div>
-                        <a href="https://skillshop.credential.net/ba2c44b4-119b-41a6-83bc-893d6a25b322" target="_blank" class="certification-verify">
-                            Verify
-                        </a>
-                    </div>
-                    
-                    <div class="certification-card">
-                        <div class="certification-name">Google Analytics Individual Qualification</div>
-                        <div class="certification-issuer">Google</div>
-                        <div class="certification-year">2025</div>
-                        <a href="https://skillshop.credential.net/7009112e-839e-4d7c-b58c-6e3d9ef9c5e2" target="_blank" class="certification-verify">
-                            Verify
-                        </a>
-                    </div>
-                    
-                    <div class="certification-card">
-                        <div class="certification-name">Meta Certified Digital Marketing Associate</div>
-                        <div class="certification-issuer">Meta</div>
-                        <div class="certification-year">2025</div>
-                        <div class="certification-verify">Verified</div>
-                    </div>
-                    
-                    <div class="certification-card">
-                        <div class="certification-name">Meta Certified Media Buying Professional</div>
-                        <div class="certification-issuer">Meta</div>
-                        <div class="certification-year">2025</div>
-                        <div class="certification-verify">Verified</div>
-                    </div>
-                    
-                    <div class="certification-card">
-                        <div class="certification-name">HubSpot Content Marketing Certification</div>
-                        <div class="certification-issuer">HubSpot</div>
-                        <div class="certification-year">2022</div>
-                        <div class="certification-verify">Verified</div>
-                    </div>
-                    
-                    <div class="certification-card">
-                        <div class="certification-name">HubSpot Social Media Marketing Certification</div>
-                        <div class="certification-issuer">HubSpot</div>
-                        <div class="certification-year">2021</div>
-                        <div class="certification-verify">Verified</div>
-                    </div>
-                    
-                    <div class="certification-card">
-                        <div class="certification-name">Microsoft Advertising Certification</div>
-                        <div class="certification-issuer">Microsoft</div>
-                        <div class="certification-year">2024</div>
-                        <div class="certification-verify">Verified</div>
-                    </div>
-                    
-                    <!-- New Certifications -->
-                    <div class="certification-card">
-                        <div class="certification-name">AI-Powered Performance Ads Certification</div>
-                        <div class="certification-issuer">Google</div>
-                        <div class="certification-year">2025</div>
-                        <a href="https://skillshop.credential.net/69dd5c90-2bd6-4938-a6fc-faa42059f081" target="_blank" class="certification-verify">
-                            Verify
-                        </a>
-                    </div>
-                    
-                    <div class="certification-card">
-                        <div class="certification-name">Google Ads Apps Certification</div>
-                        <div class="certification-issuer">Google</div>
-                        <div class="certification-year">2025</div>
-                        <a href="https://skillshop.credential.net/72238762-0da1-475f-a069-fab7922eaee0" target="_blank" class="certification-verify">
-                            Verify
-                        </a>
-                    </div>
-                    
-                    <div class="certification-card">
-                        <div class="certification-name">AI-Powered Shopping Ads Certification</div>
-                        <div class="certification-issuer">Google</div>
-                        <div class="certification-year">2025</div>
-                        <a href="https://skillshop.credential.net/9a9975b1-c106-40cb-9e69-901a237eb42f" target="_blank" class="certification-verify">
-                            Verify
-                        </a>
-                    </div>
-                    
-                    <div class="certification-card">
-                        <div class="certification-name">Search Ads 360 Certification Exam</div>
-                        <div class="certification-issuer">Google</div>
-                        <div class="certification-year">2025</div>
-                        <a href="https://skillshop.credential.net/f7c18796-492d-4628-9f80-5a30983db49d" target="_blank" class="certification-verify">
-                            Verify
-                        </a>
-                    </div>
-                    
-                     <div class="certification-card">
-                        <div class="certification-name">Google Ads - Measurement CertificationExam</div>
-                        <div class="certification-issuer">Google</div>
-                        <div class="certification-year">2025</div>
-                        <a href="https://skillshop.credential.net/f5d19565-2551-456d-bab9-8c4b09a5fd4a#acc.8clwOsTx" target="_blank" class="certification-verify">
-                            Verify
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <!-- Footer for Web View -->
+        <footer class="bg-gray-50 p-6 text-center border-t border-gray-100 print:hidden text-gray-400 text-xs shadow-inner">
+            <p>© 2025 MD Sajjad Islam. All rights reserved.</p>
+        </footer>
+    </main>
+
     <script>
-        // Custom Cursor Effect
-        document.addEventListener('DOMContentLoaded', function() {
-            const cursor = document.querySelector('.cursor');
-            const cursorGlow = document.querySelector('.cursor-glow');
-            const cursorTrail = document.querySelector('.cursor-trail');
-            const ripple = document.querySelector('.ripple');
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Dynamic Title Logic
+        const titles = [
+            "Digital Marketing Manager",
+            "Performance Marketer",
+            "Google Ads Specialist",
+            "GA4 & GTM Expert",
+            "CRM Specialist",
+            "Social Media Strategist",
+            "Meta Ads Expert",
+            "SEO Specialist",
+            "Data Analyst"
+        ];
+
+        let index = 0;
+        const dynamicTitle = document.querySelector('.dynamic-title');
+
+        function changeTitle() {
+            // Add fade-out class
+            dynamicTitle.classList.add('fade-out');
             
-            // Mouse position tracking
-            let mouseX = 0;
-            let mouseY = 0;
-            let cursorX = 0;
-            let cursorY = 0;
-            let glowX = 0;
-            let glowY = 0;
-            let trailX = 0;
-            let trailY = 0;
-            
-            // Speed factors for different cursor elements
-            const cursorSpeed = 0.2;
-            const glowSpeed = 0.1;
-            const trailSpeed = 0.05;
-            
-            // Update mouse position
-            document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-                
-                // Create ripple effect on mouse move (throttled)
-                if (Math.random() > 0.9) {
-                    createRipple(mouseX, mouseY);
-                }
-            });
-            
-            // Touch support for mobile
-            document.addEventListener('touchmove', (e) => {
-                if (e.touches.length > 0) {
-                    mouseX = e.touches[0].clientX;
-                    mouseY = e.touches[0].clientY;
-                    
-                    // Create ripple effect on touch
-                    createRipple(mouseX, mouseY);
-                }
-            });
-            
-            // Create ripple effect
-            function createRipple(x, y) {
-                const rippleClone = ripple.cloneNode(true);
-                document.body.appendChild(rippleClone);
-                
-                const size = Math.random() * 50 + 30; // Random size between 30-80px
-                rippleClone.style.width = '0px';
-                rippleClone.style.height = '0px';
-                rippleClone.style.left = x + 'px';
-                rippleClone.style.top = y + 'px';
-                rippleClone.style.opacity = '1';
-                
-                // Animate ripple
-                setTimeout(() => {
-                    rippleClone.style.width = size + 'px';
-                    rippleClone.style.height = size + 'px';
-                    rippleClone.style.opacity = '0';
-                    rippleClone.style.transition = 'all 0.8s ease-out';
-                }, 10);
-                
-                // Remove ripple after animation
-                setTimeout(() => {
-                    rippleClone.remove();
-                }, 800);
-            }
-            
-            // Animation loop for smooth cursor movement
-            function animateCursor() {
-                // Update cursor position with easing
-                cursorX += (mouseX - cursorX) * cursorSpeed;
-                cursorY += (mouseY - cursorY) * cursorSpeed;
-                
-                // Update glow position with slower easing
-                glowX += (mouseX - glowX) * glowSpeed;
-                glowY += (mouseY - glowY) * glowSpeed;
-                
-                // Update trail position with even slower easing
-                trailX += (mouseX - trailX) * trailSpeed;
-                trailY += (mouseY - trailY) * trailSpeed;
-                
-                // Apply positions
-                cursor.style.left = cursorX + 'px';
-                cursor.style.top = cursorY + 'px';
-                
-                cursorGlow.style.left = glowX + 'px';
-                cursorGlow.style.top = glowY + 'px';
-                
-                cursorTrail.style.left = trailX + 'px';
-                cursorTrail.style.top = trailY + 'px';
-                
-                requestAnimationFrame(animateCursor);
-            }
-            
-            // Start animation
-            animateCursor();
-            
-            // Cursor size change on interactive elements
-            const interactiveElements = document.querySelectorAll('a, button, .contact-item, .experience-item, .volunteer-item, .education-item, .skill-category, .certification-card, .featured-cert, .skill-item, .certification-verify, .featured-cert-verify');
-            
-            interactiveElements.forEach(element => {
-                element.addEventListener('mouseenter', () => {
-                    cursor.style.width = '40px';
-                    cursor.style.height = '40px';
-                    cursorGlow.style.width = '60px';
-                    cursorGlow.style.height = '60px';
-                });
-                
-                element.addEventListener('mouseleave', () => {
-                    cursor.style.width = '20px';
-                    cursor.style.height = '20px';
-                    cursorGlow.style.width = '40px';
-                    cursorGlow.style.height = '40px';
-                });
-            });
-            
-            // Touch support for interactive elements
-            interactiveElements.forEach(element => {
-                element.addEventListener('touchstart', (e) => {
-                    createRipple(e.touches[0].clientX, e.touches[0].clientY);
-                });
-            });
-            
-            // Create a burst of ripples on click
-            document.addEventListener('click', (e) => {
-                // Create multiple ripples for a burst effect
-                for (let i = 0; i < 5; i++) {
-                    setTimeout(() => {
-                        const offsetX = (Math.random() - 0.5) * 30;
-                        const offsetY = (Math.random() - 0.5) * 30;
-                        createRipple(e.clientX + offsetX, e.clientY + offsetY);
-                    }, i * 50);
-                }
-            });
-            
-            // Create a larger ripple on touch
-            document.addEventListener('touchstart', (e) => {
-                if (e.touches.length > 0) {
-                    const touch = e.touches[0];
-                    const rippleClone = ripple.cloneNode(true);
-                    document.body.appendChild(rippleClone);
-                    
-                    const size = 100; // Larger size for touch
-                    rippleClone.style.width = '0px';
-                    rippleClone.style.height = '0px';
-                    rippleClone.style.left = touch.clientX + 'px';
-                    rippleClone.style.top = touch.clientY + 'px';
-                    rippleClone.style.opacity = '1';
-                    
-                    // Animate ripple
-                    setTimeout(() => {
-                        rippleClone.style.width = size + 'px';
-                        rippleClone.style.height = size + 'px';
-                        rippleClone.style.opacity = '0';
-                        rippleClone.style.transition = 'all 1s ease-out';
-                    }, 10);
-                    
-                    // Remove ripple after animation
-                    setTimeout(() => {
-                        rippleClone.remove();
-                    }, 1000);
-                }
-            });
-            
-            // PDF Download Functionality
-            const downloadBtn = document.getElementById('downloadBtn');
-            const pdfInstructions = document.getElementById('pdfInstructions');
-            const closeInstructions = document.getElementById('closeInstructions');
-            
-            downloadBtn.addEventListener('click', () => {
-                pdfInstructions.style.display = 'block';
-            });
-            
-            closeInstructions.addEventListener('click', () => {
-                pdfInstructions.style.display = 'none';
-                
-                // Check if mobile device
-                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-                
-                if (isMobile) {
-                    // For mobile devices, use a more direct approach
-                    try {
-                        // Try to use the browser's print functionality
-                        window.print();
-                    } catch (e) {
-                        // If print fails, provide alternative instructions
-                        alert('Please use your browser\'s share menu and select "Print" to save as PDF.');
-                    }
-                } else {
-                    // For desktop, use the standard print dialog
-                    window.print();
-                }
-            });
-            
-            // Close instructions when clicking outside
-            window.addEventListener('click', (e) => {
-                if (e.target === pdfInstructions) {
-                    pdfInstructions.style.display = 'none';
-                }
-            });
-        });
+            // Wait for fade out (300ms matches CSS transition), then change text
+            setTimeout(() => {
+                index = (index + 1) % titles.length;
+                dynamicTitle.textContent = titles[index];
+                // Remove fade-out class to fade in
+                dynamicTitle.classList.remove('fade-out');
+            }, 300);
+        }
+
+        // Change title every 2.5 seconds (gives time to read)
+        setInterval(changeTitle, 2500);
     </script>
 </body>
 </html>
